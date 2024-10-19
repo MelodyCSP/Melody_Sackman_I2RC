@@ -3,10 +3,13 @@ Name: Melody Sackman
 
 Section: I2RC
 
+
 Week: 6
 
 
+
 ## Code
+
 
 The main topic this week was: PID control algorithm 
 
@@ -24,10 +27,11 @@ I asked:
     - Mrs. Reigle 
     - Three friends (one confirmed)
 
+
 ### Important notes for future reference
 Notes about git, and helpful resources, etc. 
 Please put them here, they will really help you in the future 
-    - Remember to create a repository for each week with the W# and name of the lab we are working on
+Remember to create a repository for each week with the W# and name of the lab we are working on
     - If you want to access previous code from other labs (that you worked on in a different repository), make sure to switch to its respective repository to edit the code. You can still look at the code without doing this, though
     - Remember to refer to the Command Composition page in the FIRST Robotics Competition link (linked in slack) when coding in labs or on the robot
 

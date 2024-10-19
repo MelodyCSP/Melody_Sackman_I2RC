@@ -4,6 +4,7 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -62,6 +63,19 @@ public class DriveTrain extends SubsystemBase {
 
   }
   
+  public double getTicks() {
+    return (leftDriveTalon.getSelectedSensorPosition(0) + rightDriveTalon.getSelectedSensorPosition(0))/2;
+  }
+
+  public double getMeters() {
+    return (Units.inchesToMeters(6)*Math.PI/4096)*getTicks();
+  }
+
+  public void resetEncoders() {
+    leftDriveTalon.setSelectedSensorPosition(0, 0, 10);
+    rightDriveTalon.setSelectedSensorPosition(0, 0, 10);
+
+  }
 
   @Override
   public void periodic() {
