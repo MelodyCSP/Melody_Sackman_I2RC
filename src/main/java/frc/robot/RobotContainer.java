@@ -4,12 +4,15 @@
 
 package frc.robot;
 
+import frc.robot.Commands.PIDTurnccw;
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.EncoderDrive;
 //import frc.robot.commands.Autos;
 //import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.DriveTrain;
-import edu.wpi.first.wpilibj.Encoder;
+
+import edu.wpi.first.math.controller.PIDController;
+
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
@@ -22,7 +25,8 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final DriveTrain m_exampleSubsystem = new DriveTrain();
+  private final DriveTrain dt = new DriveTrain();
+  private final PIDTurnccw PIDTurn = new PIDTurnccw(dt, 90);
 
   private final DriveTrain dt = new DriveTrain();
   private final EncoderDrive drive = new EncoderDrive(dt, 2);
@@ -60,6 +64,8 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An example command will be run in autonomous
-    return drive;
+
+    return PIDTurn;
+
   }
 }
