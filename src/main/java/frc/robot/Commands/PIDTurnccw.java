@@ -7,7 +7,7 @@ import frc.robot.subsystems.DriveTrain;
 public class PIDTurnccw extends Command{
     DriveTrain dt;
     double setPointAngle;
-    PIDController PID = new PIDController(0.9, 0, 0);
+    PIDController PID = new PIDController(0.7/90, 0, 0);
 
     
     
@@ -20,7 +20,7 @@ public class PIDTurnccw extends Command{
         PID.setTolerance(5);
         addRequirements(this.dt);
     }
-    
+
     @Override
     public void initialize() {
         dt.reset();
@@ -30,11 +30,8 @@ public class PIDTurnccw extends Command{
     double output = PID.calculate(90.0);
     @Override
     public void execute() {
-        if (output > 0) {
-            dt.tankDrive(output, -(output));
-        } else {
-            dt.tankDrive(-(output), output);
-        }
+     
+        dt.tankDrive(-(output), output);
         
     }
 
