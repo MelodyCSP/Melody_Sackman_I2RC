@@ -3,6 +3,34 @@ Name: Melody Sackman
 
 Section: I2RC
 
+Week: 7
+
+
+## Code
+
+The main topic this week was: TeleOp
+
+Commands: TeleOp.java (in the TeleOp branch)
+
+Subsystems: DriveTrain
+
+### How does the code work?
+Write about how it works here
+The code first creates a joystick object so we can set it up to control the robot later. A DriveTrain object, dt, is also created, which represents the robot. TeleOp.java uses the same skeleton as the Encoder and PID code, therefore it has the initialize, execute, end, and isFinished methods. The initialize and end methods are the same, and only stop the robot's motion by setting tankDrive to 0. In the execute method, the leftPowerRaw and rightPowerRaw variables are created to track the joystick movement. The getRawAxis is set to 1 for the left, and 5 for the right. This way, the robot will respond to how far we push the joystick, and adjust its speed based off of it. For example, if I push the joystick a little forward, the robot will move slowly in that direction. If I push it further however, it will go faster. Since we want the robot to only move when the joysticks are being used, the isFinished method returns false. 
+
+### Important notes for future reference
+Notes about git, and helpful resources, etc. 
+
+Please put them here, they will really help you in the future 
+
+
+
+---------------------------------------------------------------------------
+# Preseason Digital Notebook Example
+Name: Melody Sackman
+
+Section: I2RC
+
 
 Week: 6
 
