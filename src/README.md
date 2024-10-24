@@ -22,7 +22,9 @@ The code first creates a joystick object so we can set it up to control the robo
 Notes about git, and helpful resources, etc. 
 
 Please put them here, they will really help you in the future 
-
+    - To merge two branches together, you have to go to your git repository and select the "Contribute" dropdown under the green "Code" dropdown. Then, open the pull request. At the top, select the base, which is usually what you want the other branch to merge with, and the branch to "compare" it to. After, create the pull request.
+    - There might be some issues (merge conflicts), so make sure to delete any code with >>>>>, <<<<<<, or ===== to fix it. 
+    - Before there might've been some issues with other files such as EncoderDrive.java not showing up in the W3.PID branch. After merging the two branches together, EncoderDrive can be accessed in the same branch as the PIDTurnccw.java.
 
 
 ---------------------------------------------------------------------------
