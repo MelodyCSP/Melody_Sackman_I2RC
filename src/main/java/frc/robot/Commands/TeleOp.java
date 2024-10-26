@@ -24,7 +24,7 @@ public class TeleOp extends Command{
     @Override
     public void execute() {
         double leftPowerRaw = joy.getRawAxis(1);
-        double rightPowerRaw = joy.getRawAxis(0);
+        double rightPowerRaw = joy.getRawAxis(5);
 
         dt.tankDrive(leftPowerRaw, rightPowerRaw);
         
